@@ -1,0 +1,41 @@
+/* SEARCH BAR */
+.search {
+    margin-top: 100px;
+    width: 100%;
+    /* attachh button to input */
+    display: flex;
+}
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid orangered;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #ffa500;
+    -moz-appearance: none;/* older firefox */
+    -webkit-appearance: none; /* safari, chrome, edge and ie mobile */
+    appearance: none;
+  }
+  
+  .searchTerm:focus{
+    color: orchid;
+  }
+  
+  .searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid orange;
+    background: orange;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+          
+  .searchButton:focus {
+      outline: 0;
+  }

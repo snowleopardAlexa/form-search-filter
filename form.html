@@ -10,14 +10,38 @@
     <link rel="stylesheet" href="searchBar.css">
 </head>
 <body>
-  <!--search bar-->
-  <div class="searchBar">
-      <div class="search" role="search">
-          <input type="search" class="searchTerm" placeholder="Enter search term" aria-label="Search">
-          <button type="submit" class="searchButton">
-              <i class="fa fa-search"></i>
-          </button>
-      </div>
-  </div>    
+<!--search bar-->
+<div class="searchBar" style="margin-top: 50px;">
+    <div class="search" role="search">
+        <input type="search" class="searchTerm" placeholder="Enter search term" aria-label="Search">
+        <button type="submit" class="searchButton">
+            <i class="fa fa-search"></i>
+        </button>
+    </div>
+</div>    
+
+<!-- moving search bar --> 
+<div class="movingSeachBar" style="margin-top: 70px;">
+    <form action="" id="searchForm">
+      <input type="search">
+      <i class="fa" role="button" aria-label="search"></i>
+    </form>
+</div>  
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+      $('body').removeClass('preload'); // fix for animation movement on page load
+    });
+
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+      document.body.classList.add("resize-animation-stopper");
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        document.body.classList.remove("resize-animation-stopper");
+      }, 400);
+    });
+</script>
 </body>
 </html>
